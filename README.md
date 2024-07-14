@@ -70,6 +70,6 @@ This project aims to detect deepfake images and videos using advanced machine le
 4. Upload a image or video file and click the "Upload" button.
 5. View the results displayed on the screen.
 
-[https://raw.githubusercontent.com/Bhargavi-6/DeepfakeDetection/main/static/images/app_screen1.jpg]
+![App Screenshot](https://raw.githubusercontent.com/Bhargavi-6/DeepfakeDetection/main/static/images/app_screen1.jpg)
 
-[https://raw.githubusercontent.com/Bhargavi-6/DeepfakeDetection/main/static/images/app_screen2.jpg]
+![App Screenshot](https://raw.githubusercontent.com/Bhargavi-6/DeepfakeDetection/main/static/images/app_screen2.jpg)
