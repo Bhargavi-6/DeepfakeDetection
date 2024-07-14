@@ -41,5 +41,7 @@ def predict_image(filepath):
 
     score = round(predicted[0, 0]*100)
 
+    if predicted_class == 'Real':
+        score = 100 - score
 
     return f'{predicted_class} with Confidence {score}%'
