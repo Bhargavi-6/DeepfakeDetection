@@ -74,4 +74,4 @@ This project aims to detect deepfake images and videos using advanced machine le
 
 ![App Screenshot](https://raw.githubusercontent.com/Bhargavi-6/DeepfakeDetection/main/static/images/app_screen2.jpg)
 
-![App Screenshot](https://raw.githubusercontent.com/Bhargavi-6/DeepfakeDetection/main/static/images/app_screen2.jpg)
+![App Screenshot](https://raw.githubusercontent.com/Bhargavi-6/DeepfakeDetection/main/static/images/app_screen3.jpg)
