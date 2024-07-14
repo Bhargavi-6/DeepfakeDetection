@@ -33,13 +33,23 @@ async def upload_video(file: UploadFile = File(...), name: str = Form(...)):
         shutil.copyfileobj(file.file, file_object)
     print(file_location)
     # Perform prediction
-    prediction = videoinference.sequence_prediction(file_location)
+    probabilities = videoinference.sequence_prediction(file_location)
+    print(probabilities)
+    # Compare the probabilities
+    real_probability = probabilities[0]
+    fake_probability = 1 -real_probability
 
-    score = np.round_(prediction[0]*100)
+    # Determine which probability is greater and print the result
+    if real_probability > fake_probability:
+        predicted_class= f"Real with Confidence {real_probability * 100:.2f}%"
+        #print(f"The video is predicted to be real with {real_probability * 100:.2f}% confidence.")
+    else:
+        # print(f"The video is predicted to be fake with {fake_probability * 100:.2f}% confidence.")
+        predicted_class = f"Fake with Confidence {fake_probability * 100:.2f}%"
+    #print(prediction)
 
-    predicted_class = 'Fake' if prediction[0] <= 0.50 else 'Real'
 
-    return JSONResponse(content={"message": f'{predicted_class} with Confidence {score}%'})
+    return JSONResponse(content={"message": predicted_class})
 
 
 if __name__ == "__main__":
